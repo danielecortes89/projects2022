@@ -322,7 +322,7 @@ NUMEROS IMPARES
             System.out.println(Arrays.toString(memoria));
             System.out.println("Aprobados: "+ contAprobados);
             System.out.println("Desaprobados: "+ contDesaprobados);
-           */
+           
  
         
         double randomNum = Math.floor(Math.random()*10+1);
@@ -353,6 +353,48 @@ NUMEROS IMPARES
         }
         System.out.println(Arrays.toString(array1));
         System.out.println(Arrays.toString(array2));
+        System.out.println(Arrays.toString(array2));*/
+        
+        int[][] array1 = new int[4][5];
+        for(int i=0; i<4;i++){
+            for(int j=0; j<5; j++){
+                double entrieArr1 = Math.floor(Math.random()*10+1);
+                int entryArr1 = (int)entrieArr1;
+                array1[i][j] = entryArr1;
+            }
+        }
+        int suma = 0;
+        int total = 0;
+        for (int[] array2: array1){
+            for(int pElem:array2){
+                System.out.print(pElem + "\t");
+                suma +=pElem;
+                
+            }
+            total=+suma;
+            System.out.println("\ts:" + suma);
+            suma = 0;
+        }
+        int totalVertical =0;
+        int totalTotal =0;
+        for(int i=0; i<5;i++){
+            for(int j=0; j<4; j++){
+               totalVertical += array1[j][i]; 
+               
+            }
+            totalTotal += totalVertical;
+            System.out.print("s:" + totalVertical + "\t");
+            totalVertical=0;
+        }
+        
+        
+            
+            
+            System.out.println("\ts:" + totalTotal + "  ");
+        
+        
+        
+        
     }
 
 
